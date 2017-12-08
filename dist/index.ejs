@@ -8,11 +8,38 @@
 </head>
 <body>
     <div id="app">
+        <main>
+        </main>
+        <section>
+            <input type="text" v-model="inputText" v-on:keyup.enter="testSubmit">
+        </section>
     </div>
     <script>
+        
+        var Note = function( iTs = [], forTonejs = [] ){
+            this.iTs = ['ど', 'ド'];
+            this.forTonejs = ['C4','16n'];
+        }
+        
         var app = new Vue({
             el : '#app',
-            
+            data : {
+                inputText : "",
+                notes : [],
+                noteTexts : [
+                    
+                ],
+            },
+            methods : {
+                testSubmit : function(){
+                    console.log(app.inputText);
+                    var iT = app.inputText;
+                    app.inputText = "";
+                    
+                    
+                    
+                }
+            }
         });
     </script>
 </body>
