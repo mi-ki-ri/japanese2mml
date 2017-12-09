@@ -4,14 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp min-js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browserify": "^14.5.0",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
-    "tone": "^0.11.11"
+    "gulp": "^3.9.1",
+    "tone": "^0.11.11",
+    "vinyl-source-stream": "^1.1.0",
+    "vue": "^2.5.9",
+    "vueify": "^9.4.1"
   }
 }

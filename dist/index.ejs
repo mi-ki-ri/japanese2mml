@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <script src="js/Tone.min.js"></script>
-    <script src="js/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="./js/main.js"></script>
 </head>
 <body>
     <div id="app">
@@ -14,33 +14,21 @@
             <input type="text" v-model="inputText" v-on:keyup.enter="testSubmit">
         </section>
     </div>
+
     <script>
-        
-        var Note = function( iTs = [], forTonejs = [] ){
-            this.iTs = ['ど', 'ド'];
-            this.forTonejs = ['C4','16n'];
+      var app = new Vue({
+        el :'#app',
+        data : {
+          inputText : ""
+        },
+        methods : {
+          testSubmit : function(){
+            
+          }
         }
-        
-        var app = new Vue({
-            el : '#app',
-            data : {
-                inputText : "",
-                notes : [],
-                noteTexts : [
-                    
-                ],
-            },
-            methods : {
-                testSubmit : function(){
-                    console.log(app.inputText);
-                    var iT = app.inputText;
-                    app.inputText = "";
-                    
-                    
-                    
-                }
-            }
-        });
+      });
+
+
     </script>
 </body>
 </html>
